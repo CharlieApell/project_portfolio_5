@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import styles from '../styles/NavBar.module.css';
 import { NavLink } from 'react-router-dom';
@@ -35,7 +35,7 @@ const NavBar = () => {
                 <NavLink
                 className={styles.NavLink}
                 activeClassName={styles.Active}
-                to ="/register">
+                to ="/signup">
                 <i className='fas fa-user-plus'></i>Sign up
                 </NavLink>
 
