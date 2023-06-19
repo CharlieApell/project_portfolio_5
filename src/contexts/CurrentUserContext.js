@@ -34,10 +34,10 @@ export const CurrentUserProvider = ({children}) => {
         } catch(err){
           setCurrentUser((prevCurrentUser) => {
             if (prevCurrentUser) {
-              history.push('/signin')
+              history.push('/signin');
             }
-            return null
-          })
+            return null;
+          });
           return config
         }
         return config
@@ -55,12 +55,12 @@ export const CurrentUserProvider = ({children}) => {
             } catch(err){
               setCurrentUser(prevCurrentUser => {
                 if (prevCurrentUser){
-                  history.push('/signin')
+                  history.push('/signin');
                 }
-                return null
-              })
+                return null;
+              });
             }
-            return axios(err.config)
+            return axios(err.config);
           }
           return Promise.reject(err);
         }
