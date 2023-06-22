@@ -30,9 +30,9 @@ const NavBar = () => {
     to ="/posts/create">
     <i className='fas fa-plus-square'></i>Add post
   </NavLink>
-  )
+  );
 
-  const loggedInIcons =
+  const loggedInIcons = (
     <>
       <NavLink
         className={styles.NavLink}
@@ -50,7 +50,7 @@ const NavBar = () => {
 
       <NavLink
         className={styles.NavLink}
-        to ={"/profiles/${currentUser?.profile_id}"}>
+        to ={`/profiles/${currentUser?.profile_id}`}>
         <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
       </NavLink>
 
@@ -62,6 +62,8 @@ const NavBar = () => {
         <i className='fas fa-sign-out-alt'></i>Sign out
       </NavLink>
     </>
+  );
+
   const loggedOutIcons = (
     <>
       <NavLink
@@ -107,7 +109,7 @@ const NavBar = () => {
         </Navbar.Collapse>
     </Container>
     </Navbar>
-  )
-}
+  );
+};
 
 export default NavBar
