@@ -10,3 +10,21 @@
   .Active i {
     color: #8d160f;
   }
+
+  .NavBarWrapper {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .Footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #dadadf;
+    padding: 10px 0;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  
