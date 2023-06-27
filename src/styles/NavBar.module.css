@@ -2,6 +2,12 @@
     background-color: #ffffff;
     border: 1px solid #dadadf;
   }
+
+  .NavLoggedIn {
+    color: #8d160f;
+    padding: 5px;
+    font-weight: 500;
+  }
   
   .NavLink {
     padding: 5px;

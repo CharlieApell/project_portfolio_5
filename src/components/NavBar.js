@@ -1,10 +1,11 @@
 import React from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
 import logo from '../assets/logo.png';
 import styles from '../styles/NavBar.module.css';
 import { NavLink } from 'react-router-dom';
 import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
-import Avatar from './Avatar';
 import axios from "axios";
 import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 
@@ -33,19 +34,19 @@ const NavBar = () => {
   </NavLink>
   );
 
-  const profileIcon =(
-    <NavLink
-    className={styles.NavLink}
-    to={`/profiles/${currentUser?.profile_id}`}
-    >
-    <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+  const profileIcon = (
+    <NavLink 
+      className={styles.NavLink}
+      to={`/profiles/${currentUser?.profile_id}`}>
+    
+      <i className='fas fa-user'></i>Profile
     </NavLink>
   );
 
   const loggedInIcons = (
     <>
       <NavLink
-        className={styles.NavLink}
+        className={styles.NavLoggedIn}
         activeClassName={styles.Active}
         to="/feed"
       >
@@ -53,7 +54,7 @@ const NavBar = () => {
       </NavLink>
       
       <NavLink
-        className={styles.NavLink}
+        className={styles.NavLoggedIn}
         activeClassName={styles.Active}
         to="/posts/create"
       >
@@ -61,7 +62,7 @@ const NavBar = () => {
       </NavLink>
 
       <NavLink
-        className={styles.NavLink}
+        className={styles.NavLoggedIn}
         activeClassName={styles.Active}
         to="/liked"
       >
@@ -125,13 +126,14 @@ const NavBar = () => {
                   {signOutIcon}
                 </React.Fragment>
               )}
+              {!currentUser && loggedOutIcons}
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
       <footer className={styles.Footer}>
         <Nav className="justify-content-center">
-          {currentUser ? loggedInIcons : loggedOutIcons}
+          {currentUser && loggedInIcons}
         </Nav>
       </footer>
     </div>
