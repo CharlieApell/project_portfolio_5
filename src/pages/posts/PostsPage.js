@@ -43,7 +43,7 @@ function PostsPage({ message, filter = "" }) {
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     setHasLoaded(false);
@@ -53,7 +53,7 @@ function PostsPage({ message, filter = "" }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query, pathname, sorting]);
+  }, [filter, query, pathname, sorting, currentUser]);
 
   return (
     <Row className="h-100">
@@ -73,8 +73,10 @@ function PostsPage({ message, filter = "" }) {
             </Link>
           </Jumbotron>
         )}
+        {currentUser && (
         <PopularProfiles mobile />
-        <i className={`fas fa-search ${styles.SearchIcon}`} />
+        )}
+        <i className={`fas fa-search ${styles.SearchIcon}`}/>
         <Form
           className={styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
@@ -92,9 +94,9 @@ function PostsPage({ message, filter = "" }) {
             onChange={(event) => setSorting(event.target.value)}
             className={styles.SortSelect}
           >
-            <option value="newest">Sort by Newest</option>
-            <option value="most_liked">Sort by Most Liked</option>
-            <option value="most_commented">Sort by Most Commented</option>
+            <option value="newest">Sort feed by Newest</option>
+            <option value="most_liked">Sort feed by Most Liked</option>
+            <option value="most_commented">Sort feed by Most Commented</option>
           </Form.Control>
         </Form>
 
@@ -126,9 +128,11 @@ function PostsPage({ message, filter = "" }) {
           </Container>
         )}
       </Col>
+      {currentUser && (
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />
       </Col>
+      )}
     </Row>
   );
 }
