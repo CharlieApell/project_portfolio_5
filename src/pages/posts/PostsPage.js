@@ -33,7 +33,11 @@ function PostsPage({ message, filter = "" }) {
       try {
         const { data } = await axiosReq.get(
           `/posts/?${filter}search=${query}&ordering=${
-            sorting === "newest" ? "-created_at" : "-likes_count"
+            sorting === "newest" 
+            ? "-created_at" 
+            : sorting === "most_liked"
+            ? "-likes_count"
+            : "-comments_count"
           }`
         );
         setPosts(data);
@@ -90,6 +94,7 @@ function PostsPage({ message, filter = "" }) {
           >
             <option value="newest">Sort by Newest</option>
             <option value="most_liked">Sort by Most Liked</option>
+            <option value="most_commented">Sort by Most Commented</option>
           </Form.Control>
         </Form>
 
@@ -98,7 +103,11 @@ function PostsPage({ message, filter = "" }) {
             {posts.results.length ? (
               <InfiniteScroll
                 children={posts.results.map((post) => (
-                  <Post key={post.id} {...post} setPosts={setPosts} />
+                  <Post
+                    key={post.id}
+                    {...post}
+                    setPosts={setPosts}
+                  />
                 ))}
                 dataLength={posts.results.length}
                 loader={<Asset spinner />}
