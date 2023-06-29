@@ -29,8 +29,9 @@ const ProfileEditForm = () => {
     name: "",
     content: "",
     image: "",
+    occupation: "",
   });
-  const { name, content, image } = profileData;
+  const { name, content, image, occupation } = profileData;
 
   const [errors, setErrors] = useState({});
 
@@ -65,6 +66,7 @@ const ProfileEditForm = () => {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("content", content);
+    formData.append("occupation", occupation);
 
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
@@ -95,6 +97,22 @@ const ProfileEditForm = () => {
           rows={7}
         />
       </Form.Group>
+
+      <Form.Label>Occupation</Form.Label>
+        <Form.Control 
+          name="occupation"
+          value={occupation}
+          onChange={handleChange}
+          as="select" 
+          size="sm" 
+          custom
+        >
+          <option value="food_enthusiast">Food Enthusiast</option>
+          <option value="chef">Chef</option>
+          <option value="bartender">Bartender</option>
+          <option value="barista">Barista</option>
+          <option value="home_cook">Home Cook</option>
+      </Form.Control>
 
       {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>

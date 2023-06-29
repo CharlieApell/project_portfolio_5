@@ -24,9 +24,11 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
+import occupationLabels from "./occupationLabels";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
+  const [occupation, setOccupation] = useState("");
   const currentUser = useCurrentUser();
   const {id} = useParams();
   const {setProfileData, handleFollow, handleUnfollow} = useSetProfileData();
@@ -66,7 +68,7 @@ function ProfilePage() {
           />
         </Col>
         <Col lg={6}>
-          <h3 className="m-2">{profile?.owner}</h3>
+          <h3 className="m-2">{profile?.owner} - {occupation}</h3>
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
               <div>{profile?.posts_count}</div>
@@ -129,6 +131,12 @@ function ProfilePage() {
       )}
     </>
   );
+
+  useEffect(() => {
+    if (profile?.occupation) {
+      setOccupation(occupationLabels[profile.occupation] || "");
+    }
+  }, [profile]);
 
   return (
     <Row>

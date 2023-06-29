@@ -21,8 +21,9 @@ function PostEditForm() {
     title: "",
     content: "",
     image: "",
+    category: "",
   });
-  const { title, content, image } = postData;
+  const { title, content, image, category } = postData;
 
   const imageInput = useRef(null)
   const history = useHistory()
@@ -65,6 +66,7 @@ function PostEditForm() {
 
     formData.append('title', title);
     formData.append('content', content);
+    formData.append("category", category);
 
     if(imageInput?.current?.files[0]){
       formData.append('image', imageInput.current.files[0]);
@@ -99,6 +101,20 @@ function PostEditForm() {
         </Alert>
       )
       )}
+
+      <Form.Label>Category</Form.Label>
+        <Form.Control 
+          name="category"
+          value={category}
+          onChange={handleChange}
+          as="select" 
+          size="sm" 
+          custom
+        >
+          <option value="food">Food</option>
+          <option value="drinks">Drinks</option>
+          <option value="restaurants">Restaurants</option>
+      </Form.Control>
 
       <Form.Group>
         <Form.Label>Content</Form.Label>

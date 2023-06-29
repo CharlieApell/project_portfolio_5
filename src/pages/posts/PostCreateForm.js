@@ -87,6 +87,19 @@ function PostCreateForm() {
       )
       )}
 
+      <Form.Label>Category</Form.Label>
+        <Form.Control 
+          name="category"
+          onChange={handleChange}
+          as="select" 
+          size="sm" 
+          custom
+        >
+          <option value="food">Food</option>
+          <option value="drinks">Drinks</option>
+          <option value="restaurants">Restaurants</option>
+      </Form.Control>
+
       <Form.Group>
         <Form.Label>Content</Form.Label>
         <Form.Control
