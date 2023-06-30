@@ -5,7 +5,6 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Post from "./Post";
 import Asset from "../../components/Asset";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
 
@@ -16,7 +15,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { Link } from "react-router-dom/cjs/react-router-dom";
+import Jumbotron from "../../components/Jumbotron";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -59,19 +58,7 @@ function PostsPage({ message, filter = "" }) {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         {!currentUser && (
-          <Jumbotron className={styles.Jumbotron}>
-            <h1>Welcome to Foodie!</h1>
-            <p>
-            Are you tired of scrolling through your social media feed, only to be bombarded with countless selfies and memes? <br/><br/>
-            Say goodbye to the monotony and discover Foodie - the perfect platform exclusively designed for food and drink enthusiasts like yourself.
-            Here, you can share your lunch, cocktail creations or cherished family recipes<br/><br/>
-            Join our thriving community and immerse yourself in a vibrant world where every bite becomes an opportunity to connect, explore, and ignite your culinary inspiration.<br/>
-            Whether you're seeking mouthwatering recipes, restaurant recommendations, or simply want to indulge in the art of food photography, Foodie has it all.<br/>
-            </p>
-            <Link className={styles.Link} to="/signup">
-            Sounds interesting? <span>Sign up now!</span>
-            </Link>
-          </Jumbotron>
+          <Jumbotron />
         )}
         {currentUser && (
         <PopularProfiles mobile />
