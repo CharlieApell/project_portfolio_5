@@ -56,7 +56,7 @@ The [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for va
 ### PEP8
 The PEP8 Python Validator in GitPod was used to check that the Python code in my API meets PEP8 standards.
 
-- [API](./src/assets/testing/pep8.png)
+- Result for [API](./src/assets/testing/pep8.png)
 
 ***
 
@@ -71,11 +71,14 @@ All User Stories as been tested with no issues found.
 
 ## Automated Testing
 
-For this project, I have chosen to concentrate on writing automated tests for several components: Asset, JumboTron, MoreDropDown, NavBar and NotFound.
+For this project, I have writing automated tests for several components: Asset, JumboTron, MoreDropDown, NavBar and NotFound.
 
-I have utilized React Testing Library MSW to write these tests. You can find all the tests here. The mock handlers and server setup can be found here and here.
+I have utilized React Testing Library MSW to write these tests. You can find all the tests **[here](https://github.com/CharlieApell/project_portfolio_5/tree/main/src/components/__tests__)**.<br>
+Mock handlers and server setup can be found **[here](https://github.com/CharlieApell/project_portfolio_5/blob/main/src/mocks/handlers.js)** and **[here](https://github.com/CharlieApell/project_portfolio_5/blob/main/src/setupTests.js)**.<br>
 
-I have executed all the automated tests using npm, and they have successfully passed."
+I have executed all the automated tests using npm, and they have successfully passed.
+
+- Result for [Npm Test](./src/assets/testing/mswnpm.png)
 
 ## Manual Testing
 
