@@ -92,16 +92,24 @@ A scope was defined to identify what needed to be done to align features with th
 
 ***
 
+### Structure
+![flowchart](src/assets/readme/wireframes/flowchart.png)
+
+***
 ### Wireframes
-Home Page
+Home Page<br>
 ![Home Page](/src/assets/readme/wireframes/homepage.png)
-Home Page Logged In
+
+Home Page Logged In<br>
 ![Home Page Logged In](/src/assets/readme/wireframes/loggedin.png)
-Post Page
+
+Post Page<br>
 ![Post Page](/src/assets/readme/wireframes/postpage.png)
-Create Post
+
+Create Post<br>
 ![Home Page](/src/assets/readme/wireframes/createpost.png)
-Profile Page
+
+Profile Page<br>
 ![Home Page](/src/assets/readme/wireframes/profilepage.png)
 
 ***
@@ -333,6 +341,8 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 
 ***
 ## Credits 
+### Deployment
+- Copied from my PP4
 
 ### Media
 - Some images have been sourced from [Unsplash](https://unsplash.com) others are my own.
@@ -347,6 +357,20 @@ References used:
 ***
 ## Acknowledgements
 
+I would like to acknowledge the following sources that have provided inspiration and guidance for the development of this project:
 
+- Code Institute's Moments Walkthrough: I would like to acknowledge Code Institute's Moments Walkthrough for providing a foundation of code that I have modified to suit the specific needs and purposes of Foodie. The Moments Walkthrough served as a valuable reference, and I am grateful for the code snippets and concepts it provided, which I have adapted and customized to align with the vision and functionality of Foodie.
+
+- Code Institute's Slack Community: The supportive and knowledgeable community on Code Institute's Slack platform has been instrumental in providing assistance and insights throughout the development process. The prompt responses and collaborative discussions have been immensely helpful in overcoming challenges and finding solutions.
+
+- Emelie Markkanen's PP5 Garden Diary: Inspiration and code concepts influenced certain aspects of Foodie, such as the Jumbotron.
+
+- Pablo Embarach's PP5 Coffeeie-API: Inspiration and code concepts influenced certain aspects of Foodie, such as the category and occupation.
+
+- Niclas Tanskanen's PP5 Snap Tap App, have influenced the development of some features in Foodie.
+
+- Andy Guttridge's PP5 Tribehub, has provided guidance for certain aspects of Foodie's development.
+
+I am grateful for the inspiration and resources provided by these sources, which have played a significant role in the successful completion of this project.
 
 ***
