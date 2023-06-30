@@ -8,12 +8,20 @@ Based on Code Institute's Moments Walkthrough, I have modified and customized Fo
 [View GitHub Repository](https://github.com/CharlieApell/project_portfolio_5)
 
 ![amiresponsive](./src/assets/readme/amiresponsive.png)
+***
+### API Project Links
+
+- [API - Repository](https://github.com/CharlieApell/pp5-foodie-api)
+- [API - Deployment](https://drf-api-charlie.herokuapp.com/)
 
 ***
 ## Table of contents
 - [UX](#UX)
     - [User Stories](#user-stories)
     - [Development Planes](#development-planes)
+    - [Structure](#structure)
+    - [Wireframes](#wireframes)
+    - [Database Schema](#database-schema-for-the-api)
     - [Design](#design)
 - [Features](#features)
     - [Design Features](#design-features) 
@@ -42,7 +50,7 @@ Based on Code Institute's Moments Walkthrough, I have modified and customized Fo
 
 
 ***
-## Development Planes
+### Development Planes
 In order to create a comprehensive and engaging website, I researched various social media platforms to identify the essential features and functionalities.
 
 ### Strategy
@@ -76,6 +84,7 @@ The website needs to provide the following capabilities for the **user:**
 The website needs to provide the following capabilities for the **admin:**
 - delete comments, posts and accounts.
 
+***
 
 ### Scope
 A scope was defined to identify what needed to be done to align features with the strategy previously defined. This was broken into two categories:
@@ -131,10 +140,6 @@ I chose the Roboto font and Sans-serif for the Foodie website to match its style
 
 
 ![Roboto Font](/src/assets/readme/features/fontspp5.png)
-
-### Imagery
-
-Some of the images are my own and some are from [Unsplash](https://unsplash.com/ 'Unsplash website').
 
 ***
 ## Features
@@ -256,7 +261,7 @@ Each page of the website features a consistent responsive navigational system:
 - [Balsamiq](https://balsamiq.com/ "Link to Balsamiq")
      - Balsamiq was used to make the wireframes.
 - [Lucidchart](https://lucid.app/ "Link to Lucidchart")
-     - Lucidchart was used to make the database schema.
+     - Lucidchart was used to make the database schema and flowchart.
 
 ***
 ## Testing
