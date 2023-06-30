@@ -69,6 +69,14 @@ All User Stories as been tested with no issues found.
 
 ***
 
+## Automated Testing
+
+For this project, I have chosen to concentrate on writing automated tests for several components: Asset, JumboTron, MoreDropDown, NavBar and NotFound.
+
+I have utilized React Testing Library MSW to write these tests. You can find all the tests here. The mock handlers and server setup can be found here and here.
+
+I have executed all the automated tests using npm, and they have successfully passed."
+
 ## Manual Testing
 
 During development, I relied on Google developer tools to verify the proper functioning of all components and troubleshoot any unexpected problems.
