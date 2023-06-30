@@ -69,7 +69,7 @@ function PostsPage({ message, filter = "" }) {
             Whether you're seeking mouthwatering recipes, restaurant recommendations, or simply want to indulge in the art of food photography, Foodie has it all.<br/>
             </p>
             <Link className={styles.Link} to="/signup">
-              Don't have an account? <span>Sign up now!</span>
+            Sounds interesting? <span>Sign up now!</span>
             </Link>
           </Jumbotron>
         )}

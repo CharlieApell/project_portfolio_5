@@ -26,8 +26,9 @@ function PostCreateForm() {
     title: "",
     content: "",
     image: "",
+    category: "",
   });
-  const { title, content, image } = postData;
+  const { title, content, image, category } = postData;
 
   const imageInput = useRef(null)
   const history = useHistory()
@@ -56,6 +57,7 @@ function PostCreateForm() {
     formData.append('title', title)
     formData.append('content', content)
     formData.append('image', imageInput.current.files[0])
+    formData.append("category", category);
 
     try {
       const {data} = await axiosReq.post('/posts/', formData)
