@@ -89,13 +89,13 @@ const Comment = (props) => {
                 <p>Are you sure you want to delete this comment?</p>
                 <div className={styles.DeletePopupButtons}>
                   <button
-                    className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                    className={`${btnStyles.Button} ${btnStyles.Red}`}
                     onClick={handleDeleteConfirmed}
                   >
                     Yes
                   </button>
                   <button
-                    className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                    className={`${btnStyles.Button} ${btnStyles.Red}`}
                     onClick={handleDeleteCancelled}
                   >
                     No

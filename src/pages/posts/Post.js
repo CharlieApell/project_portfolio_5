@@ -110,8 +110,8 @@ const Post = (props) => {
           <div className={styles.DeletePopup}>
             <p>Are you sure you want to delete this item?</p>
             <div className={styles.DeletePopupButtons}>
-              <button className={`${btnStyles.Button} ${btnStyles.Blue}`} onClick={handleDeleteConfirmed}>Yes</button>
-              <button className={`${btnStyles.Button} ${btnStyles.Blue}`} onClick={handleDeleteCancelled}>No</button>
+              <button className={`${btnStyles.Button} ${btnStyles.Red}`} onClick={handleDeleteConfirmed}>Yes</button>
+              <button className={`${btnStyles.Button} ${btnStyles.Red}`} onClick={handleDeleteCancelled}>No</button>
             </div>
           </div>
         )}

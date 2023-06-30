@@ -32,8 +32,8 @@
     width: 100%;
   }
   
-  .Blue,
-  .BlueOutline:hover,
+  .Red,
+  .RedOutline:hover,
   .Bright:hover {
     background-color: #8d160f;
     color: #ffffff;
