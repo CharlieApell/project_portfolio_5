@@ -1,5 +1,5 @@
 {
-  "name": "moments",
+  "name": "foodie",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "msw": "^0.35.0"
   },
   "engines": {

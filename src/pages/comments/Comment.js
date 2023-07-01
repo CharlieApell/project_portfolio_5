@@ -47,7 +47,6 @@ const Comment = (props) => {
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
     } catch (err) {
-      // Hantera fel
     }
   };
 
@@ -103,6 +102,7 @@ const Comment = (props) => {
                 </div>
               </div>
             )}
+            
           </>
         )}
       </Media>
