@@ -86,6 +86,7 @@ Based on Code Institute's Moments Walkthrough, I have modified and customized Fo
 33. Update username and password: As a logged in **user** I can **update my username and password** so that **I can change my display name and keep my profile secure**
 <br>
 <br>
+
 - [User Stories](https://github.com/CharlieApell/project_portfolio_5/issues)
 - [Kanban Board](https://github.com/users/CharlieApell/projects/7)
 
