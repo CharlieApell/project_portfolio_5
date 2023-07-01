@@ -45,6 +45,47 @@ Based on Code Institute's Moments Walkthrough, I have modified and customized Fo
 ## UX 
 
 ### User Stories:
+
+#### Navigation & Authentication
+1. Navigation: As a **user** I can **view a navbar from every page** so that **I can navigate easily between pages**
+2. Routing: As a **user** I can **navigate through pages quickly** so that **I can view content seamlessly without page refresh**
+3. Sign up: As a **user** I can **create a new account** so that **I can access all the features for signed up users**
+4. Sign in: As a **user** I can **sign in to the app** so that **I can access functionality for logged in users**
+5. Logged in Status: As a **user** I can **tell if I am logged in or not** so that **I can log in if I need to**
+6. Refreshing access tokens: As a **user** I can **maintain my logged-in status until I choose to log out** so that **my user experience is not compromised**
+7. Conditional rendering - As a logged out **user** I can **see sign in and sign up options** so that **I can sign in/sign up**
+8. Profile: As a **user** I can **view user's Profile** so that **I can easily identify users of the application**
+#### Adding & Liking Posts
+9. Create posts: As a logged in **user** I can **create posts** so that **I can share my images with the world!**
+10. Categorize posts: As a logged in **user** I can **categorize my posts** so that **people can find them easier**
+11. View a post: As a **user** I can **view the details of a single post** so that **I can learn more about it**
+12. Like a post: As a logged in **user** I can **like a post** so that **I can show my support for the posts that interest me**
+#### The Posts Page
+13. View most recent posts: As a **user** I can **view all the most recent posts, ordered by most recently created first** so that **I am up to date with the newest content**
+14. Search for content: As a **user**, I can **search for posts with keywords** so that **I can find the posts and user profiles I am most interested in.**
+15. Categorize the content on the posts page: As a **user**, I can **Categorize content by newest, most liked and most commented** so that **I can find the most active posts I am most interested in.**
+16. View liked posts: As a logged in **user** I can **view the posts I liked** so that **I can find the posts I enjoy the most**
+17. View posts of followed users: As a logged in **user** I can **view content filtered by users I follow** so that **I can keep up to date with what they are posting about**
+18. Infinite scroll: As a **user** I can **keep scrolling through the images on the site, that are loaded for me automatically** so that **I don't have to click on "next page" etc**
+#### The Post Page
+19. Post page: As a **user** I can **view the posts page** so that **I can read the comments about the post**
+20. Edit post: As a **post owner** I can **edit my post title and description** so that **I can make corrections or update my post after it was created**
+21. Create a comment: As a logged in **user** I can **add comments to a post** so that **I can share my thoughts about the post**
+22. Comment date: As a **user** I can **see how long ago a comment was made** so that **I know how old a comment is**
+23. View comments: As a **user** I can **read comments on posts** so that **I can read what other users think about the posts**
+24. Delete comments: As an **owner of a comment** I can **delete my comment** so that **I can control removal of my comment from the application**
+25. Edit a comment: As an **owner of a comment** I can **edit my comment** so that **I can fix or update my existing comment**
+#### The Profile Page
+26. Profile page: As a **user** I can **view other users profiles** so that **I can see their posts and learn more about them**
+27. Most followed profiles: As a **user** I can **see a list of the most followed profiles** so that **I can see which profiles are popular**
+28. userprofile - user stats: As a **user** I can **view statistics about a specific user: bio, number of posts, follows and users followed** so that **I can learn more about them**
+29. Follow/Unfollow a user: As a logged in **user** I can **follow and unfollow other users** so that **I can see and remove posts by specific users in my posts feed**
+30. View all posts by a specific user: As a **user** I can **view all the posts by a specific user** so that **I can catch up on their latest posts, or decide I want to follow them**
+31. Edit profile: As a logged in **user** I can **edit my profile** so that **I can change my profile picture and bio**
+32. Edit occupation: As a logged in **user** I can **change my occupation** so that **I can show the other users my occupation**
+33. Update username and password: As a logged in **user** I can **update my username and password** so that **I can change my display name and keep my profile secure**
+<br>
+<br>
 - [User Stories](https://github.com/CharlieApell/project_portfolio_5/issues)
 - [Kanban Board](https://github.com/users/CharlieApell/projects/7)
 
@@ -71,7 +112,7 @@ The website aims to target three main categories of users:
         - Appreciative of culinary creativity
         - Tired of mainstream social media content
     - Values:
-        - "Life's to short for bad food"
+        - "Life's to short for bad food, endless selfie-scrolling and tiktok dances"
     - Lifestyles:
         - Individuals interested in food, beverages and restaurants
 
@@ -136,7 +177,7 @@ I chose to use a clean look for the website.
 ### Logo & Typography
 The Foodie logo was made with [Looka](https://looka.com/onboarding)<br>
 
-I chose the Roboto font and Sans-serif for the Foodie website to match its style and overall look. To keep things consistent and easy to implement, I used the same fonts throughout the rest of the website. This decision helped me maintain a balance between staying true to the brand's identity and ensuring a smooth design process. The result is a visually appealing and unified website that fits seamlessly together.
+I chose the [Roboto font from Google Fonts](https://fonts.google.com/specimen/Roboto) with Sans-serif as backup for the Foodie website to match its style and overall look. To keep things consistent and easy to implement, I used the same fonts throughout the rest of the website. This decision helped me maintain a balance between staying true to the brand's identity and ensuring a smooth design process. The result is a visually appealing and unified website that fits seamlessly together.
 
 
 ![Roboto Font](/src/assets/readme/features/fontspp5.png)
@@ -228,6 +269,8 @@ Each page of the website features a consistent responsive navigational system:
 
 **Bug** - Couldn't start the development browser with npm start.
 - ***Solution***: Had to use nvm install 16 && nvm use 16 to make it work.
+
+**Issue** - Certain devices, including iOS/Safari, MacOS/Safari, Samsung/Samsung Internet, and others, may require disabling anti-tracking features (e.g., 'Prevent Cross-Site Tracking') to use the Foodie web app. These features block cross-domain requests between the separate domains used by the Django Rest Framework API and the React front-end hosted on Heroku. Unfortunately, hosting both on the same domain is currently the only known solution. See [link to Stack Overflow thread](https://stackoverflow.com/questions/56972162/is-there-a-workaround-for-safari-ios-prevent-cross-site-tracking-option-when) for more information.
 
 **Issue** - Occasionally, I encounter a frustrating issue where I am unable to click on any links or images within the web application. The only solution I have found so far is to manually refresh the page, after which the links and images become responsive again. I have attempted to search for solutions online, but unfortunately, I have not been able to find any relevant answers. Regrettably, due to time constraints, I have been unable to invest further efforts into resolving this issue.
 
@@ -357,7 +400,8 @@ References used:
 - [Code Institute Moments Walkthrough](https://github.com/Code-Institute-Solutions/moments "Link to Code Institute Moments Repository")
 - [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
 - [React-Bootstrap](https://react-bootstrap-v4.netlify.app/ "Link to BootStrap page")
-- [Codemy](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi "Link to Codemy's YouTube")
+- [Programming with Mosh](https://www.youtube.com/@programmingwithmosh "Link to CodemyProgramming with Mosh's YouTube")
+- [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified "Link to Web Dev Simplified's YouTube")
 
 ***
 ## Acknowledgements
@@ -375,7 +419,5 @@ I would like to acknowledge the following sources that have provided inspiration
 - Niclas Tanskanen's PP5 Snap Tap App, have influenced the development of some features in Foodie.
 
 - Andy Guttridge's PP5 Tribehub, has provided guidance for certain aspects of Foodie's development.
-
-I am grateful for the inspiration and resources provided by these sources, which have played a significant role in the successful completion of this project.
 
 ***
