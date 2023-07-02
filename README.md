@@ -255,6 +255,9 @@ Each page of the website features a consistent responsive navigational system:
 
 ***
 ### Features to Implement in the future
+- **Post Ratings**
+     - **Feature:** Users can rate and provide feedback on posts made by others, allowing for a more interactive and engaging community experience.
+     - **Reason for not featuring in this release:** Due to time constraints and technical difficulties, the implementation of the post rating feature was not possible within the project's deadline. However, it remains a priority for future development once the current phase is completed and evaluated. This feature will enhance user engagement and enable the community to express their opinions and preferences on posts.
 - **Restaurant Ratings**
      - **Feature:**  Users can rate and provide feedback for restaurants they have visited, allowing others to make informed dining choices.
      - **Reason for not featuring in this release:** Due to time constraints, the restaurant rating feature was not implemented before the project's deadline. However, it is planned to be developed in the future after the current phase of the project is completed and evaluated.
